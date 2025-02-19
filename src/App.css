@@ -1,0 +1,50 @@
+.game-container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.game-field {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #3498db;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.shape.circle {
+  border-radius: 50%;
+  background-color: #e74c3c; /* Красный */
+}
+
+.shape.square {
+  background-color: #2ecc71; /* Зеленый */
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #f39c12; /* Оранжевый */
+  transform: rotate(180deg); /* Поворот треугольника */
+}
+
+.shape:hover {
+  transform: scale(1.2);
+}
+
